@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>upcoming</title>
+    
 </head>
 <body>
     <style>
@@ -14,60 +15,20 @@
       background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
       background-size: 20px 20px; /* tiny carbon fiber dots */
     }
-    /* Navigation Bar Styling */
-.navbar {
-  background-color: #111; /* Dark shade to match header */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar li {
-  margin: 0;
-}
-
-.navbar a {
-  display: block;
-  color: #f2f2f2;
-  text-decoration: none;
-  padding: 15px 25px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: #444;
-  color: #fff;
-}
-
-.navbar a.active {
-  background-color: #e60000; /* Highlight color for active page */
-  color: white;
-  border-radius: 3px;
-}
-
     </style>
-    <nav class="navbar">
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="hot.html">Hot Deals</a></li>
-    <li><a href="upcoming.html">Upcoming Cars</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="Contact.html">Contact Us</a></li>
-
-  </ul>
-</nav>
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="upcoming.html">CarVerse</a>
+      <ul class="nav-list">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="hot.html">Hot Deals</a></li>
+        <li><a href="upcoming.html" class="active">Upcoming Cars</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
     <h1 align="center">Upcoming Cars</h1>
 </body>
 </html>
