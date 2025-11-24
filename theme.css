@@ -6,7 +6,6 @@
   accent2: #bc6c25
 */
 
-/* 1) Variable overrides for style.css-based pages */
 :root {
   --bg-900: #283618;
   --bg-800: #283618;
@@ -19,7 +18,7 @@
   --radius: 12px;
 }
 
-/* 2) Global body/background overrides (wins over page-embedded <style> with !important) */
+ /* Global body/background overrides (wins over page-embedded <style> with !important) */ */
 body{
   background:
     radial-gradient(circle at 20% 10%, rgba(255,255,255,0.04) 1px, transparent 1px),
@@ -28,7 +27,7 @@ body{
   color: var(--text) !important;
 }
 
-/* 3) Navigation + active state tuned to palette */
+ /* Navigation + active state tuned to palette */ */
 .navbar{
   background: rgba(40,54,24,0.7) !important; 
   border-bottom: 1px solid rgba(254,250,224,0.08) !important;
@@ -47,7 +46,7 @@ body{
   box-shadow: 0 6px 18px rgba(188,108,37,0.28) !important;
 }
 
-/* 4) Card components (index/reusable) */
+/* Card components (index/reusable) */
 .card{
   background: var(--card-bg) !important;
   color: var(--card-text) !important;
@@ -61,14 +60,14 @@ body{
   color: #7b744f !important; /* muted olive */
 }
 
-/* 5) Hero block */
+/* Hero block */
 .hero-card{
   background: linear-gradient(180deg, var(--card-bg), #fffdf5) !important;
   color: var(--card-text) !important;
   border-radius: var(--radius) !important;
 }
 
-/* 6) Buttons for detail pages and common actions */
+/* Buttons for detail pages and common actions */
 a.btn, .btn{
   border:1px solid #606c38 !important;
   color:#283618 !important;
@@ -81,13 +80,13 @@ a.primary.btn{
   color:#fff !important;
 }
 
-/* 7) Footer */
+/* Footer */
 .site-footer{
   color: var(--muted) !important;
   border-top:1px solid rgba(254,250,224,0.08) !important;
 }
 
-/* 8) Contact form quick theming */
+/* Contact form quick theming */
 .form, table, th, td{
   border-color: #606c38 !important;
 }
@@ -108,8 +107,7 @@ input[type="submit"], input[type="reset"]{
   border-radius:8px;
 }
 
-/* 9) Standalone detail pages that define their own :root vars (ev6/nexon/scorpio-n/zs-ev)
-   Linking this file AFTER their <style> will override their tokens */
+
 body > header{
   background: #283618 !important;
   color: #fefae0 !important;
