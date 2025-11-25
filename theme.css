@@ -11,7 +11,7 @@
   --bg-800: #283618;
   --panel:  #283618;
   --muted:  #b7ad8b;            
-  --text:   #bc6c25; 
+  --text:   #fefae0; 
   --accent: #bc6c25; 
   --card-bg: #fefae0;
   --card-text: #283618;
@@ -58,6 +58,7 @@ body{
 }
 .card .meta{
   color: #7b744f !important; /* muted olive */
+  color: var(--card-text) !important;
 }
 
 /* Hero block */
