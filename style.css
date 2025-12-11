@@ -108,6 +108,7 @@ body{
 }
 
 .hero-card{
+
   max-width:900px;
   background: linear-gradient(180deg, #ffffff, #fbfbfb);
   color:#db0404;
@@ -135,13 +136,29 @@ body{
 }
 
 /* ----- Grid + Card ----- */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
+/* === Carousel on .grid === */
+.grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;          /* horizontal scroll */
+  scroll-snap-type: x mandatory;  /* snap effect */
+  padding-bottom: 10px;
+  scrollbar-width: none;     /* Firefox hide scroll */
 }
 
+.grid::-webkit-scrollbar {
+  display: none;             /* Chrome/Edge/Safari hide scroll */
+}
+
+/* Each card snaps into place */
+.card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;            /* prevent shrinking */
+}
+
+
 .card{
+    min-width: 250PX;
   display:block;
   background:var(--card-bg);
   color:var(--card-text);
@@ -173,12 +190,37 @@ body{
   font-weight:700;
   margin-bottom:6px;
   font-size:16px;
+  
 }
 
 .card .meta{
   font-size:13px;
-  color:var(--muted);
+  font-weight: 600;
+  color:rgb(31, 23, 23);
 }
+/* -----------------------blog-content---------------- */
+.blog-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.blog-content {
+    flex: 1;
+    text-align: left;   /* ensures your content stays left-aligned */
+    color: white;       /* optional if you want white text */
+}
+.blog-container{
+  display: flex;
+  align-items: row;
+
+}
+.blog-img{
+  margin-top: 100px;
+}
+
 
 /* ----- Footer ----- */
 .site-footer{
