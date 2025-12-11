@@ -144,8 +144,22 @@ body{
   scroll-snap-type: x mandatory;  /* snap effect */
   padding-bottom: 10px;
   scrollbar-width: none;     /* Firefox hide scroll */
+    width: max-content;
+  animation: scroll 25s linear infinite;
+}
+.grid::after {
+  content: "";
+  display: flex;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .grid::-webkit-scrollbar {
   display: none;             /* Chrome/Edge/Safari hide scroll */
 }
