@@ -1,6 +1,4 @@
-/* ==============================
-   CarVerse — styles.css
-   ============================== */
+
 
 /* ----- Theme colors ----- */
 :root{
@@ -137,29 +135,53 @@ body{
 
 /* ----- Grid + Card ----- */
 /* === Carousel on .grid === */
+
 .grid {
   display: flex;
   gap: 20px;
-  overflow-x: auto;          /* horizontal scroll */
-  scroll-snap-type: x mandatory;  /* snap effect */
+  overflow-x: auto;              /* only horizontal scroll */
+  scroll-snap-type: x mandatory; /* snap cards */
   padding-bottom: 10px;
-  scrollbar-width: none;     /* Firefox hide scroll */
-    width: max-content;
-  animation: scroll 25s linear infinite;
+  scrollbar-width: none;
+  width: 100%;                   /* page stays fixed */
 }
+
+.grid::-webkit-scrollbar {
+  display: none;
+}
+/* ===== Blog Auto Carousel ===== */
+
+.blog-carousel {
+  overflow: hidden;   /* hide scroll bar */
+  position: relative;
+}
+
+.blog-carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: blogScroll 40s linear infinite;
+}
+
+.blog-carousel:hover .blog-carousel-track {
+  animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes blogScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
 .grid::after {
   content: "";
   display: flex;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 .grid::-webkit-scrollbar {
   display: none;             /* Chrome/Edge/Safari hide scroll */
 }
@@ -167,8 +189,9 @@ body{
 /* Each card snaps into place */
 .card {
   scroll-snap-align: start;
-  flex: 0 0 auto;            /* prevent shrinking */
+  flex: 0 0 250px;   /* fixed card width */
 }
+
 
 
 .card{
