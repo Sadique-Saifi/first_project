@@ -159,12 +159,50 @@ body{
 .blog-carousel-track {
   display: flex;
   gap: 20px;
-  animation: blogScroll 40s linear infinite;
+  animation: blogScroll 50s linear infinite;
 }
 
 .blog-carousel:hover .blog-carousel-track {
   animation-play-state: paused; /* pause on hover */
 }
+
+/* ===== HOT NEWS (Single Column Layout) ===== */
+
+.hot-news-list {
+  display: flex;
+  flex-direction: column;   /* one card per row */
+  gap: 20px;
+}
+
+.hot-news-card {
+  width: 100%;               /* stretch full width */
+  flex: none;                /* disable carousel flex behavior */
+}
+
+/* Optional: horizontal layout inside card */
+.hot-news-card {
+  display: flex;
+}
+
+.hot-news-card img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.hot-news-card .content {
+  padding: 16px;
+}
+.car-new{
+       display: flex;
+      align-items: row;
+      gap: 20px;
+}
+.car-new-img{
+  margin-top: 30px;
+}
+
+
 
 @keyframes blogScroll {
   from {
@@ -260,13 +298,77 @@ body{
 
 
 /* ----- Footer ----- */
-.site-footer{
-  text-align:center;
-  color:var(--muted);
-  padding:24px 10px;
-  margin-top:40px;
-  border-top:1px solid rgba(255,255,255,0.03);
+
+.site-footer {
+  background: #070a0e;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin-top: 60px;
+  color: var(--muted);
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-box h4 {
+  color: var(--text);
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-box ul li a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-box ul li a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 14px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
+}
+
+/* Responsive Footer */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+
 
 /* ----- Responsive tweaks ----- */
 @media (max-width:900px){
