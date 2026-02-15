@@ -1,22 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>reviews</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us - CarVerse</title>
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  background-color: #0f1115;
+  color: #e6e6e6;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background-image: radial-gradient(#1c1f26 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #4da3ff;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  text-align: center;
+  line-height: 1.9;
+  margin: 25px auto 0;
+  font-size: 18px;
+  max-width: 900px;
+  color: #cfd3da;
+}
+
+.section {
+  margin-top: 70px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1000px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-box {
+  background: #151922;
+  border-radius: 14px;
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  border: 1px solid #202533;
+}
+
+.feature-box h3 {
+  color: #6fb3ff;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  color: #aeb6c3;
+  font-size: 15px;
+}
+
+/* Vision */
+.vision-box {
+  background: #151922;
+  border: 1px solid #202533;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 35px;
+  line-height: 1.9;
+  color: #cfd3da;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+/* Team */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4da3ff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+.member-name {
+  margin-top: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #e6e6e6;
+}
+
+.member-role {
+  font-size: 14px;
+  color: #9aa3af;
+}
+
+/* Address */
+.address {
+  text-align: center;
+  margin-top: 50px;
+  color: #b7bfcc;
+  line-height: 1.8;
+}
+</style>
 </head>
+
 <body>
-    <style>
-            body {
-      background-color: #121212;
-      color: #E0E0E0;
-      background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
-      background-size: 20px 20px; /* tiny carbon fiber dots */
-            }
-            </style>
-      <!-- /* Navigation Bar Styling */ -->
-<!-- Navigation Bar -->
+
+  <!-- Navigation Bar -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a class="brand" href="index.html">CarVerse</a>
@@ -26,11 +148,78 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="upcoming.html">Upcoming Cars</a></li>
         <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        
+        <li><a href="contact.html">Contact Us</a></li>  
       </ul>
     </div>
   </nav>
-    <h1 align="center">About us</h1>
+
+<div class="container">
+  <h1>About CarVerse</h1>
+  <p class="about-text">
+    CarVerse is an intelligent automobile information platform designed to help people explore, compare, and understand cars before making a confident purchase decision. We simplify complex automotive data into clear, user‑friendly insights so that every visitor — whether a first‑time buyer or an enthusiast — can choose the right vehicle with clarity.
+    <br><br>
+    Our platform provides reliable car knowledge, side‑by‑side comparisons, upcoming car alerts, and the latest automobile news in India such as price revisions, GST updates, and new technology launches. When a user is ready to buy, CarVerse bridges the gap between research and purchase by recommending trusted and verified car dealers in the user’s local area.
+  </p>
+
+  <div class="section">
+    <h2>What We Provide</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Car Knowledge</h3>
+        <p>Understand specifications, safety features, mileage, and technology in simple language.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Smart Comparison</h3>
+        <p>Compare multiple cars instantly to identify the best value and features.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Upcoming Cars</h3>
+        <p>Stay informed about future launches, expected prices, and innovations.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Dealer Guidance</h3>
+        <p>Discover trusted nearby dealers when you are ready to purchase.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Our Vision</h2>
+    <div class="vision-box">
+      Our vision is to evolve CarVerse into a complete intelligent car‑buying ecosystem powered by modern technology. In the future, we aim to integrate AI‑based car recommendations, real‑time dealer inventory, on‑road price prediction, and virtual car exploration experiences. We envision a platform where users can research, compare, experience, and purchase vehicles seamlessly in one place.
+      <br><br>
+      As automotive technology advances toward electric vehicles, connected cars, and smart mobility, CarVerse strives to become a trusted digital companion guiding users through every stage of their automotive journey.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Our Team</h2>
+    <div class="team-grid">
+      <div class="member">
+        <img src="team1.jpg" alt="Team Member 1">
+        <div class="member-name">Vishal Raghav</div>
+        <!-- <div class="member-role">Frontend Developer</div> -->
+      </div>
+      <div class="member">
+        <img src="" alt="Team Member 2">
+        <div class="member-name">Sadique</div>
+        <!-- <div class="member-role">Backend Developer</div> -->
+      </div>
+      <div class="member">
+        <img src="team3.jpg" alt="Team Member 3">
+        <div class="member-name">Shshank Pratap</div>
+        <!-- <div class="member-role">Database & Research</div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="address">
+    <strong>CarVerse Project Team</strong><br>
+    MCA Student Project<br>
+    India<br>
+    Email: contact@carverse.in
+  </div>
+</div>
+
 </body>
 </html>
